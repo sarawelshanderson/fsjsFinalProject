@@ -1,0 +1,103 @@
+/* =================================
+  Base Element Styles
+==================================== */
+
+body {
+  background-color: lightblue;
+}
+
+h2 {
+  color: rgb(19, 0, 128);
+}
+
+ul {
+  background: #3399ff;
+  padding: 20px;
+}
+
+ul li {   
+  margin: 5px;
+}
+
+
+
+
+/* =================================
+  Base Layout Styles - applies to everything
+==================================== */
+
+
+/* =================================
+  Media Queries - applies to specific size devices
+==================================== */
+@media (min-width: 0px), (max-width:768px) {
+
+  body {
+    background-color: lightblue;
+  }
+
+  h2 {
+    color: rgb(19, 0, 128);
+  }
+
+  ul {
+    background: #3399ff;
+    padding: 20px;
+  }
+  
+  ul li {   
+    margin: 5px;
+  }
+
+}
+
+@media (min-width: 769px) {
+
+  body {
+    background-color: rgb(242, 197, 253);
+  }
+ 
+  h2 {
+    color: darkorchid;
+  }
+
+  ul {
+    background: darkorchid;
+    padding: 20px;
+  }
+  
+  ul li {
+    background: rgb(242, 197, 253);
+    margin: 5px;
+  }
+
+}
+
+@media (min-width:1200px) {
+
+  body {
+    background-color: rgb(248, 170, 118);
+  }
+
+  h2 {
+    color: orangered;
+  }
+
+  ul {
+    background: orangered;
+    padding: 20px;
+  }
+  
+  ul li {   
+    margin: 5px;
+  }
+}
+
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
