@@ -6,8 +6,11 @@ body {
   background-color: lightblue;
 }
 
-h2 {
+.main-header {
   color: rgb(19, 0, 128);
+  font-size: 1.5em;
+  align: left;
+  padding-top: 6px;
 }
 
 ul {
@@ -19,13 +22,11 @@ ul li {
   margin: 5px;
 }
 
-
-
-
-/* =================================
-  Base Layout Styles - applies to everything
-==================================== */
-
+.logo { /* let the logo on index.html resize to browser */
+	width: auto;
+    height: auto;	
+	max-width: 75%;
+}
 
 /* =================================
   Media Queries - applies to specific size devices
@@ -95,9 +96,10 @@ ul li {
 
 /* ---- Float clearfix ---- */
 
-.clearfix::after {
-  content: " ";
-  display: table;
+.clearfix:after {
+  content: " "; /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
   clear: both;
 }
-
