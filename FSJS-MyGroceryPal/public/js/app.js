@@ -68,8 +68,17 @@ function toggleAddFileFormVisibility() {
   $('#form-container').toggleClass('hidden');
 }
 
-// this is when the submit button is clicked, something is written to the console log
-function submitFileForm() {
+// this is when the submit button is clicked, fields are checked and lists are updated
+function submitFileForm() { 
+  
+  // INDEX.HTML -  ADD ITEM submit button check to see if some inputs are empty  	
+    var fileCategory;
+    var fileDescription;
+    fileCategory = document.getElementById("file-category").value;
+    fileDescription = document.getElementById("file-description").value;
+    if (fileCategory === "" || fileDescription === "" ) {
+      alert('ERROR: Please fill in fields of form.');
+    } else {  
   //and where the data is stored in the const fileData
   const fileData = {
     title: $('#file-category').val(),
@@ -105,8 +114,7 @@ function submitFileForm() {
     // this is where the fileData data is logged to the console
   //console.log("Your file data", fileData);
 }
-
-
+}
 // this is where the add file form becomes invisible because cancel was clicked
 function cancelFileForm() {
   toggleAddFileFormVisibility();
